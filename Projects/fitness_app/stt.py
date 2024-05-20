@@ -10,6 +10,8 @@ import deepspeech
 import wave
 import numpy as np
 
+folder_path = "C:/Users/soesi/fitchat_stt/" 
+
 def record():
     freq = 16000 #sampling frequency
     duration = 10 #duration of recording
@@ -17,11 +19,11 @@ def record():
     audio = sd.rec(duration * freq, samplerate=freq, channels=1, dtype='int16') #mono-channel, 16kHz audio recording in 16-bit PCM format
     sd.wait() #record audio
     print("Now thinking...")
-    write("C:/Users/soesi/fitchat_stt/recording.wav", freq, audio) #convert NumPy array to audio file
+    write(folder_path + "recording.wav", freq, audio) #convert NumPy array to audio file
 
 def transcribe(audio_file_path):
-    model_file_path = 'C:/Users/soesi/fitchat_stt/deepspeech-0.9.3-models.pbmm'
-    scorer_file_path = 'C:/Users/soesi/fitchat_stt/deepspeech-0.9.3-models.scorer' #scores STT transcription
+    model_file_path = folder_path + 'deepspeech-0.9.3-models.pbmm'
+    scorer_file_path = folder_path+ 'deepspeech-0.9.3-models.scorer' #scores STT transcription
     model = deepspeech.Model(model_file_path) #load model
     model.enableExternalScorer(scorer_file_path) #activate scorer
 
@@ -38,5 +40,5 @@ def transcribe(audio_file_path):
 if __name__ == '__main__':
     record()
     time.sleep(2.5)
-    transcribe('C:/Users/soesi/fitchat_stt/recording.wav')
-    #transcribe('C:/Users/soesi/fitchat_stt/audio/4507-16021-0012.wav') #test
+    transcribe(folder_path + 'recording.wav')
+    #transcribe(folder_path + 'audio/4507-16021-0012.wav') #test
