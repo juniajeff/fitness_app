@@ -10,7 +10,20 @@ Requirements:
 - Libraries: deepspeech, scipy, sounddevice, wavio (download using pip)
 - STT models: deepspeech-0.9.3-models.pbmm, deepspeech-0.9.3-models.scorer
 
+Pre-requisites:
+# Create and activate a virtualenv
+virtualenv -p python3 $HOME/tmp/deepspeech-venv/
+source $HOME/tmp/deepspeech-venv/bin/activate
+
+# Install DeepSpeech
+pip3 install deepspeech
+
+# Download pre-trained English model files
+curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.pbmm
+curl -LO https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.scorer
+
 How to use: 
+0. Make sure to follow the Pre-requisite steps
 1. Make sure to run the program in an evnironment (virtual or otherwise) using Python3.9 as the interpretor
 2. install the required libraries using the pip command
 3. create a folder and put the stt.py program inside it
