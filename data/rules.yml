@@ -1,0 +1,42 @@
+version: "3.1"
+
+rules:
+  - rule: greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: provide diet tips
+    steps:
+      - intent: ask_diet_tips
+      - action: action_provide_diet_tips
+
+  - rule: provide exercise info
+    steps:
+      - intent: ask_exercise_info
+      - action: action_provide_exercise_info
+
+  - rule: respond to fitness inquiry
+    steps:
+      - intent: ask_about_fitness
+      - action: utter_talk_about_fitness
+
+  - rule: provide workout suggestions
+    steps:
+      - intent: inquire_workouts
+      - action: utter_workout_suggestions
+
+  - rule: provide nutrition advice
+    steps:
+      - intent: ask_nutrition_advice
+      - action: utter_nutrition_advice
+
+  - rule: respond to bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot

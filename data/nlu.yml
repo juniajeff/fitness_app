@@ -1,0 +1,179 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hello
+      - Hi
+      - Hey
+      - Hi there
+      - Hello there
+      - Hey, how are you?
+      - Good morning
+      - Good afternoon
+      - Good evening
+
+  - intent: goodbye
+    examples: |
+      - Bye
+      - Goodbye
+      - See you later
+      - Have a nice day
+      - Bye bye
+      - Talk to you later
+      - See you soon
+
+  - intent: affirm
+    examples: |
+      - yes
+      - indeed
+      - that's right
+      - correct
+      - exactly
+      - yep
+      - absolutely
+      - sure
+      - definitely
+      - of course
+
+  - intent: deny
+    examples: |
+      - no
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - absolutely not
+      - nope
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - I'm feeling great
+      - I'm good
+      - I'm very happy
+      - I feel awesome
+      - wonderful
+      - fantastic
+      - I'm on top of the world
+      - couldn't be better
+      - life is good
+
+  - intent: mood_unhappy
+    examples: |
+      - I feel sad
+      - I'm unhappy
+      - I'm feeling down
+      - I'm upset
+      - not so good
+      - I've been better
+      - I'm feeling blue
+      - things are tough
+
+  - intent: bot_challenge
+    examples: |
+      - Are you a bot?
+      - Are you human?
+      - Am I talking to a real person?
+      - Are you a real person?
+      - Is this a bot?
+      - Are you automated?
+      - Are you a machine?
+
+  - intent: ask_about_fitness
+    examples: |
+      - Tell me about fitness
+      - I want to learn about fitness
+      - Can you give me fitness tips?
+      - What do I need to know about fitness?
+      - How can I stay fit?
+      - What are the basics of fitness?
+      - Give me some fitness advice
+      - Explain fitness to me
+      - How do I start a fitness routine?
+      - What are the key components of fitness?
+      - Why is fitness important?
+      - Tips for staying fit?
+      - How can I improve my fitness level?
+      - What should I include in my fitness plan?
+      - Can you tell me some fitness secrets?
+
+  - intent: inquire_workouts
+    examples: |
+      - What workouts should I do?
+      - Can you suggest some exercises?
+      - What are the best workouts for beginners?
+      - Recommend a workout routine
+      - What exercises are good for losing weight?
+      - How can I build muscle?
+      - What workouts are best for cardio?
+      - Can you give me a workout plan?
+      - What is a good workout for abs?
+      - How do I start working out?
+
+  - intent: ask_dynamic_question
+    examples: |
+      - Can you tell me something interesting?
+      - What is the meaning of life?
+      - Tell me a joke
+      - How does a plane fly?
+      - What is AI?
+      - Explain artificial intelligence
+      - What's the future of technology?
+      - How do computers work?
+      - What's a fun fact?
+      - Tell me something I don't know
+      - How does the internet work?
+      - What is the universe made of?
+      - Can you explain quantum physics?
+
+  - intent: ask_nutrition_advice
+    examples: |
+      - Can you give me some nutrition advice?
+      - What should I eat to stay healthy?
+      - Tell me about nutrition
+      - What are some healthy eating tips?
+      - How can I improve my diet?
+      - What foods are good for energy?
+      - What should I eat to lose weight?
+      - Can you recommend a meal plan?
+      - What are the best sources of protein?
+      - How important is hydration?
+
+  - intent: ask_exercise_info
+    examples: |
+      - Tell me about exercises
+      - I want to learn about workouts
+      - Can you give me exercise tips?
+      - What exercises should I do?
+      - How can I stay fit with exercises?
+      - What are some good workouts?
+      - Suggest some exercises
+
+  - intent: ask_diet_tips
+    examples: |
+      - Can you give me some diet tips?
+      - What should I eat to lose weight?
+      - How can I eat healthier?
+      - Do you have any diet advice?
+      - What are some good diet tips?
+      - How can I improve my diet?
+      - What are the best foods for weight loss?
+      - Can you recommend a healthy diet plan?
+      - What should I include in a balanced diet?
+      - How do I start eating healthy?
+      - Can you suggest some healthy meals?
+      - What are some nutritious snacks?
+      - How can I reduce sugar in my diet?
+      - What foods should I avoid for better health?
+      - Do you have tips for a low-carb diet?
+      - How can I increase my protein intake?
+      - What are some vegetarian diet tips?
+      - Can you give me advice on portion control?
+      - What are some good fats to include in my diet?
+      - How can I stay on track with my diet?
+      - What are some tips for eating out healthily?
+      - How can I manage cravings while on a diet?
+      - What are some good sources of fiber?
+      - Can you help me create a meal plan?
+      - What should I eat before and after workouts?

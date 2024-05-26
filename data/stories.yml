@@ -1,0 +1,64 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: provide diet tips
+    steps:
+      - intent: ask_diet_tips
+      - action: action_provide_diet_tips
+
+  - story: provide exercise info
+    steps:
+      - intent: ask_exercise_info
+      - action: action_provide_exercise_info
+
+  - story: provide fitness information
+    steps:
+      - intent: ask_about_fitness
+      - action: utter_talk_about_fitness
+
+  - story: user asks about fitness
+    steps:
+      - intent: ask_about_fitness
+      - action: utter_talk_about_fitness
+
+  - story: inquire workouts
+    steps:
+      - intent: inquire_workouts
+      - action: utter_workout_suggestions
+
+  - story: ask nutrition advice
+    steps:
+      - intent: ask_nutrition_advice
+      - action: utter_nutrition_advice
+
+  - story: bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
