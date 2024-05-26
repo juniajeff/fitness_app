@@ -1,0 +1,19 @@
+/* src/components/ChatPanel/ChatPanel.css */
+
+.chat-panel {
+    background-color: #900000;
+    color: white;
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+  }
+  
+  .chat-window {
+    height: 100%;
+    background-color: #f0f0f0;
+    color: black;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  

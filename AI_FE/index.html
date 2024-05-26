@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Fitness Website</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="diet.html">Nutrition</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Your Fitness Journey</h1>
+            <p>Get fit, stay healthy, and live your best life.</p>
+        </section>
+        <section class="content">
+            <article class="card">
+                <h2>Workouts</h2>
+                <p>Find the best workouts for your goals.</p>
+                <h3>Full Body Workout</h3>
+                <p>A comprehensive workout targeting all major muscle groups.</p>
+                <h3>Cardio Routine</h3>
+                <p>A high-intensity cardio routine to improve cardiovascular health.</p>
+            </article>
+            <article class="card">
+                <h2>Nutrition</h2>
+                <p>Nutrition advice and plans to fuel your workouts.</p>
+                <h3>Balanced Diet</h3>
+                <p>A balanced diet plan to ensure optimal performance.</p>
+                <h3>Supplement Guide</h3>
+                <p>Information on supplements to enhance your training.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Fitness Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Chatbot container -->
+    <div class="chatbot-container" id="chatbot-container">
+        <div class="chatbot-header">
+            <h4>AI Chatbot</h4>
+            <button id="close-chatbot" class="close-chatbot">x</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <!-- Chat messages will appear here -->
+        </div>
+        <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Type a message...">
+    </div>
+    <button class="open-chatbot-btn" id="open-chatbot-btn">Chat</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
