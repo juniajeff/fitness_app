@@ -111,22 +111,6 @@ nlu:
       - What is a good workout for abs?
       - How do I start working out?
 
-  - intent: ask_dynamic_question
-    examples: |
-      - Can you tell me something interesting?
-      - What is the meaning of life?
-      - Tell me a joke
-      - How does a plane fly?
-      - What is AI?
-      - Explain artificial intelligence
-      - What's the future of technology?
-      - How do computers work?
-      - What's a fun fact?
-      - Tell me something I don't know
-      - How does the internet work?
-      - What is the universe made of?
-      - Can you explain quantum physics?
-
   - intent: ask_nutrition_advice
     examples: |
       - Can you give me some nutrition advice?

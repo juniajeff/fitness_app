@@ -10,7 +10,6 @@ intents:
   - bot_challenge
   - ask_about_fitness
   - inquire_workouts
-  - ask_dynamic_question
   - ask_nutrition_advice
   - ask_diet_tips
   - ask_exercise_info
@@ -63,19 +62,21 @@ responses:
   utter_nutrition_advice:
     - text: "A balanced diet is crucial for good health. Make sure to eat a variety of foods, including vegetables, fruits, lean proteins, and whole grains."
 
+  utter_diet_tips:
+    - text: "For healthy eating, focus on whole foods, limit processed items, and drink plenty of water."
+
+  utter_exercise_info:
+    - text: "Regular exercise helps you stay fit. Activities like walking, running, and strength training are beneficial."
+
 actions:
-  - action_provide_diet_tips
-  - action_provide_exercise_info
-
-forms:
-  exercise_form:
-    required_slots:
-      - exercise_info
-
-  diet_form:
-    required_slots:
-      - diet_info
-
-  fitness_form:
-    required_slots:
-      - fitness_info
+  - utter_greet
+  - utter_goodbye
+  - utter_happy
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_iamabot
+  - utter_talk_about_fitness
+  - utter_workout_suggestions
+  - utter_nutrition_advice
+  - utter_diet_tips
+  - utter_exercise_info

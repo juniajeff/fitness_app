@@ -318,20 +318,14 @@ class ActionProvideExerciseInfo(Action):
             "TBS dip": "The triceps dip is a machine version of an exercise that many lifters perform using parallel bars or two parallel benches. The machine is found in many gyms."
         }
 
-    ef run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict) -> list:
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: dict) -> list:
         user_message = tracker.latest_message.get('text')
-        
-        # Extract the exercise name from the user's message
         exercise_name = self.extract_exercise_name(user_message)
-        
-        # Fetch exercise info
         exercise_info = self.exercise_data.get(exercise_name.lower(), "Sorry, I don't have information about that exercise.")
-        
         dispatcher.utter_message(text=exercise_info)
         return []
 
     def extract_exercise_name(self, user_message):
-        # This function can be improved to handle more complex extraction logic
         for exercise in self.exercise_data.keys():
             if exercise in user_message.lower():
                 return exercise

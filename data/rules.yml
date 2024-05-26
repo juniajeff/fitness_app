@@ -14,12 +14,12 @@ rules:
   - rule: provide diet tips
     steps:
       - intent: ask_diet_tips
-      - action: action_provide_diet_tips
+      - action: utter_diet_tips
 
   - rule: provide exercise info
     steps:
       - intent: ask_exercise_info
-      - action: action_provide_exercise_info
+      - action: utter_exercise_info
 
   - rule: respond to fitness inquiry
     steps:
