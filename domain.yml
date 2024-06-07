@@ -1,0 +1,82 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_about_fitness
+  - inquire_workouts
+  - ask_nutrition_advice
+  - ask_diet_tips
+  - ask_exercise_info
+
+entities:
+  - exercise
+  - food_item
+
+slots:
+  exercise_info:
+    type: text
+    mappings:
+      - type: from_text
+
+  diet_info:
+    type: text
+    mappings:
+      - type: from_text
+
+  fitness_info:
+    type: text
+    mappings:
+      - type: from_text
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+
+  utter_happy:
+    - text: "That's great to hear!"
+
+  utter_cheer_up:
+    - text: "Cheer up! Things will get better."
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_talk_about_fitness:
+    - text: "Fitness is essential for maintaining a healthy lifestyle. Regular exercise, balanced nutrition, and adequate rest are key components."
+
+  utter_workout_suggestions:
+    - text: "For a great workout, try a mix of cardio and strength training. Here are some exercises: running, squats, push-ups, and planks."
+
+  utter_nutrition_advice:
+    - text: "A balanced diet is crucial for good health. Make sure to eat a variety of foods, including vegetables, fruits, lean proteins, and whole grains."
+
+  utter_diet_tips:
+    - text: "For healthy eating, focus on whole foods, limit processed items, and drink plenty of water."
+
+  utter_exercise_info:
+    - text: "Regular exercise helps you stay fit. Activities like walking, running, and strength training are beneficial."
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_happy
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_iamabot
+  - utter_talk_about_fitness
+  - utter_workout_suggestions
+  - utter_nutrition_advice
+  - utter_diet_tips
+  - utter_exercise_info
