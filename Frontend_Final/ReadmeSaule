@@ -1,0 +1,142 @@
+FITNESS_APP-1/
+├── AI_FE/
+│   ├── css/
+│   │   ├── styles.css
+│   ├── js/
+│   │   ├── script.js
+│   │   ├── ChatPanel.js
+│   │   ├── DietPlan.js
+│   │   ├── ProgressTracker.js
+│   │   ├── SidePanel.js
+│   │   ├── SocialComponent.js
+│   │   ├── TopToolbar.js
+│   │   ├── WorkoutRecommendation.js
+│   ├── account.html
+│   ├── contact.html
+│   ├── diet.html
+│   ├── index.html
+│   ├── login.html
+│   ├── signup.html
+│   ├── workouts.html
+
+
+
+Files and Functions
+
+HTML Files
+index.html: The main landing page of the fitness website.
+signup.html: The sign-up page for new users to create an account.
+login.html: The login page for existing users to log into their accounts.
+account.html: The account management page where users can update their health information, manage friends, and view progress.
+diet.html: A page dedicated to diet plans.
+workouts.html: A page dedicated to workout plans.
+contact.html: A contact page for users to get in touch with support or provide feedback.
+
+CSS Files
+styles.css: Contains the styles for the website, including layout, colors, and fonts.
+
+JavaScript Files
+script.js: Contains the main JavaScript code that handles user interactions, form submissions, local storage management, and displaying user and friend information.
+ChatPanel.js: Handles chat panel interactions (if any).
+DietPlan.js: Manages diet plan-related functionalities.
+ProgressTracker.js: Tracks and displays user progress.
+SidePanel.js: Manages the side panel navigation.
+SocialComponent.js: Handles social interactions, such as adding friends.
+TopToolbar.js: Manages the top toolbar functionalities.
+WorkoutRecommendation.js: Provides workout recommendations.
+
+Functions in script.js
+User Authentication Functions:
+
+signupForm.addEventListener('submit', ...):
+Handles the sign-up process, including validation and storing new user data in local storage.
+loginForm.addEventListener('submit', ...):
+Manages the login process, verifying user credentials and setting session information.
+User Session Management Functions:
+
+checkLoggedIn():
+Checks if a user is logged in and updates the UI accordingly.
+logoutLink.addEventListener('click', ...):
+Logs the user out and clears session data.
+User Information Management Functions:
+
+loadUserInfo():
+Loads and displays the logged-in user's information.
+healthForm.addEventListener('submit', ...):
+Updates the user's health information in local storage.
+Friend Management Functions:
+
+loadFriends():
+Loads and displays the logged-in user's friends list.
+addFriendForm.addEventListener('submit', ...):
+Adds a new friend to the user's friends list.
+viewFriendProgress(friendNickname):
+Displays the progress of a friend, including their calendar data.
+displayFriendCalendar(calendarData):
+Displays a friend's calendar progress.
+Calendar Management Functions:
+
+createCalendar():
+Initializes the calendar for the current month.
+loadCalendarData():
+Loads calendar data from local storage.
+saveCalendarData():
+Saves calendar data to local storage.
+initializeCalendar():
+Initializes the calendar and sets up event listeners.
+Usage
+
+Sign Up
+Open signup.html in your browser.
+Fill in the sign-up form with your email, password, and nickname.
+Submit the form to create a new account.
+Log In
+Open login.html in your browser.
+Fill in the login form with your email and password.
+Submit the form to log in.
+Manage Account
+Open account.html after logging in.
+Update your health information using the provided form.
+Add friends by their nicknames.
+View your friends' progress by clicking the "View Progress" button next to their names.
+Calendar
+Open account.html after logging in.
+Fill in your daily nutrition and exercise plans.
+Mark goals as achieved by checking the checkboxes.
+View and manage your progress in the calendar.
+Local Storage
+The website uses local storage to save user data, including:
+
+User credentials (email, password, nickname)
+Health information (weight, height, lifestyle, nutrition)
+Friends list
+Calendar data (nutrition plan, exercise plan, goals achieved)
+Debugging
+Console Logs
+
+Use console.log() statements to verify the flow of data and ensure functions are being called as expected.
+Local Storage
+
+Manually inspect local storage in your browser's developer tools to ensure data is being stored correctly.
+Error Messages
+
+Ensure error messages are shown to the user when they enter invalid data.
+Testing Steps
+
+Sign Up
+Open the signup.html page.
+Fill in the form and submit.
+Verify that the user data is stored in local storage.
+Login
+Open the login.html page.
+Fill in the form and submit.
+Verify that the user can log in and be redirected to the index.html page.
+Account Info
+After logging in, navigate to the account.html page.
+Verify that the user information is displayed correctly.
+Update health information and ensure it is saved and displayed correctly.
+Friends and Progress
+Add a friend by their nickname.
+Verify that the friend is added to the friends list.
+Click "View Progress" next to a friend's name to view their progress.
+Ensure the friend's progress, including their calendar data, is displayed correctly.

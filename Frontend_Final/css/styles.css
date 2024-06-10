@@ -1,0 +1,330 @@
+/* Reset some basic styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header .nav-links li {
+    margin-left: 20px;
+}
+
+header .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header .nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.hero {
+    background-color: #600000;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+    margin: 10px 0;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.card h2 {
+    font-size: 28px;
+    color: #900000;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.chatbot-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.chatbot-input {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: calc(100% - 22px);
+    margin: 0 10px 10px 10px;
+}
+
+.open-chatbot-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #900000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.open-chatbot-btn:hover {
+    background-color: #700000;
+}
+
+.close-chatbot {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-section, .signup-section, .account-section {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-section h2, .signup-section h2, .account-section h2, .account-section h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #900000;
+}
+
+.login-section form, .signup-section form, .account-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-section label, .signup-section label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.login-section input, .signup-section input, .account-section textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-section button, .signup-section button, .account-section button {
+    padding: 10px;
+    background-color: #900000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-section button:hover, .signup-section button:hover, .account-section button:hover {
+    background-color: #700000;
+}
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.day {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.day strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.day.completed {
+    background-color: #c8e6c9; /* light green for achieved goals */
+}
+
+.day.missed {
+    background-color: #ffcdd2; /* light red for missed goals */
+}
+
+.day input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+.day textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+    resize: none;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Health form styles */
+.account-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.account-section h2,
+.account-section h3 {
+    text-align: center;
+    color: #333;
+}
+
+#health-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#health-form textarea {
+    height: 100px;
+    resize: vertical;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles_(H).css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap">
+
+</head>
+
+
+<body>
+    <!-- Toolbar -->
+    <div class="toolbar"> 
+        <button class="expand_sidebar" onclick="toggleSidebar()">☰</button>   
+        <h1>Diet</h1>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">🏠<span class="sidebar-text">Home</span></a>
+        <a href="exercises_(H).html">💪<span class="sidebar-text">Exercise</span></a>
+        <a href="diet_(H).html">🍽<span class="sidebar-text">Diet</span></a>
+        <a href="account.html">👥<span class="sidebar-text">Friends</span></a>
+    </div>
+    
+    <!-- Body -->
+    <div class="body_contents" id="body_contents">
+        <br><br><br><br>
+        <!-- Header -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="flex: 1; text-align: center;">
+                <p id="current_program_details" hidden></p>
+                <h2 id="program-name"> Current Diet Program </h2>
+                <p id="current_diet_details"></p>
+            </div>
+            <div class="redirect-image-container">
+                <a href="change_diet_(H).html">
+                    <img src="images/Change Programs Button.png" alt="Redirect Image" class="redirect-image">
+                </a>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <hr>
+
+        <h2> Weekly Schedule </h2>
+        <table id="schedule-table">
+            <thead>
+                <tr>
+                    <th>Monday [월]</th>
+                    <th>Tuesday [화]</th>
+                    <th>Wednesday [수]</th>
+                    <th>Thursday [목]</th>
+                    <th>Friday [금]</th>
+                    <th>Saturday [토]</th>
+                    <th>Sunday [일]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="meal-day" day-type="meal" day-order="first"> <br>🍽️<br> Monday Plan </td>
+                    <td class="meal-day" day-type="meal" day-order="second"> <br>🍽️<br> Tuesday Plan </td>
+                    <td class="meal-day" day-type="meal" day-order="third"> <br>🍽️<br> Wednesday Plan </td>
+                    <td class="meal-day" day-type="meal" day-order="fourth"> <br>🍽️<br> Thursday Plan </td>
+                    <td class="meal-day" day-type="meal" day-order="fifth"> <br>🍽️<br> Friday Plan </td>
+                    <td class="meal-day" day-type="meal" day-order="sixth"> <br>🍽️<br> Saturday Plan </td>
+                    <td class="meal-day" day-type="meal" day-order="seventh"> <br>🍽️<br> Sunday Plan </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><hr><br>
+
+        <!-- Daily Meal Plan-->
+        <div class="diet_grid_container" id="diet_grid_container">
+            <!-- Breakfast -->
+            <div class="diet_grid_item_img">
+                <img src="images/Breakfast.jpg" alt="Breakfast" style="max-width: 100%; max-height: 100%;">
+            </div>
+            <div class="diet_grid_item_text" id="text-breakfast">
+            </div>
+            
+            <!-- Row 2 -->
+            <div class="diet_grid_item_img">
+                <img src="images/Lunch.jpg"     alt="Lunch"     style="max-width: 100%; max-height: 100%;">
+            </div>
+            <div class="diet_grid_item_text" id="text-lunch">
+            </div>
+            
+            <!-- Row 3 -->
+            <div class="diet_grid_item_img">
+                <img src="images/Snack.jpg"     alt="Snack"     style="max-width: 100%; max-height: 100%;">
+            </div>
+            <div class="diet_grid_item_text" id="text-snack">
+            </div>
+            
+            <!-- Row 4 -->
+            <div class="diet_grid_item_img">
+                <img src="images/Dinner.jpg"    alt="Dinner"     style="max-width: 100%; max-height: 100%;">
+            </div>
+            <div class="diet_grid_item_text" id="text-dinner">
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    <!-- JS -->
+    <script src="js/script_(H).js"></script>
+</body>
+</html>

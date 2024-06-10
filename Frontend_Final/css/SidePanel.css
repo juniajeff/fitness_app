@@ -1,0 +1,29 @@
+/* src/components/SidePanel/SidePanel.css */
+
+.side-panel {
+    background-color: #900000;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+  }
+  
+  .side-panel h3 {
+    margin-top: 0;
+  }
+  
+  .side-panel ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-panel li {
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .side-panel li:hover {
+    text-decoration: underline;
+  }
+  

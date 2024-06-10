@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles_(H).css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap">
+</head>
+
+
+<body>
+    <!-- Toolbar -->
+    <div class="toolbar"> 
+        <button class="expand_sidebar" onclick="toggleSidebar()">☰</button>   
+        <h1>Diet</h1>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">🏠<span class="sidebar-text">Home</span></a>
+        <a href="exercises_(H).html">💪<span class="sidebar-text">Exercise</span></a>
+        <a href="diet_(H).html">🍽<span class="sidebar-text">Diet</span></a>
+        <a href="#friends">👥<span class="sidebar-text">Friends</span></a>
+    </div>
+    
+    <!-- Body -->
+    <div class="body_contents" id="body_contents">
+        <br><br><br><br>
+        <!-- Header -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="flex: 1; text-align: center;">
+                <p id="current_program_details" hidden></p>
+                <h2 id="program-name"> Current Diet Program: </h2>
+                <p id="current_diet_details"></p>
+            </div>
+            <div class="redirect-image-container">
+                <a href="diet_(H).html">
+                    <img src="images/Exit Button.png" alt="Redirect Image" class="redirect-image">
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- program type -->
+        <h1>Choose your preferred diet plan</h1> 
+        <div class="grid-container-diet">
+            <div class="grid-item-diet" data-program_type="Standard" onclick="update_program('Standard',1,0,1)">
+                <img src="images/Standard.jpg">
+            </div>
+            <div class="grid-item-diet" data-program_type="Mediterranean" onclick="update_program('Mediterranean',1,0,1)">
+                <img src="images/Mediterranean.jpg">
+            </div>
+            <div class="grid-item-diet" data-program_type="Pescatarian" onclick="update_program('Pescatarian',1,0,1)">
+                <img src="images/Pescatarian.jpg">
+            </div>
+            <div class="grid-item-diet" data-program_type="Vegetarian" onclick="update_program('Vegetarian',1,0,1)">
+                <img src="images/Vegetarian.jpg">
+            </div>
+        </div>
+        
+        <hr>
+
+        <!-- Confirmation -->
+        <div style="flex: 1; text-align: center;">
+            <h2> Would you like to start this diet plan? </h2>
+        </div>
+        <div style="display: flex; justify-content:space-evenly ; align-items: center;">
+            <div class="redirect-image-container" onclick="save_changes()">
+                <a href="diet_(H).html">
+                    <img src="images/Continue Button.png" alt="Redirect Image" class="redirect-image">
+                </a>
+            </div>
+            
+            <div class="redirect-image-container">
+                <a href="change_diet_(H).html">
+                    <img src="images/Cancel Button.png" alt="Redirect Image" class="redirect-image">
+                </a>
+            </div>
+        </div>
+
+    <!-- JS -->
+    <script src="js/script_(H).js"></script>
+</body>
+</html>

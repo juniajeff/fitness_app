@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Fitness Website</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="diet.html">Nutrition</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html" id="account-link">My Account</a></li>
+                <li><a href="#" id="logout-link">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="account-section">
+            <h2>My Account</h2>
+            <div id="account-info">
+                <!-- Account information will be displayed here -->
+            </div>
+            <h3>Update Health Information</h3>
+            <form id="health-form">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height">
+                <label for="lifestyle">Lifestyle:</label>
+                <select id="lifestyle">
+                    <option value="active">Active (goes to gym)</option>
+                    <option value="moderate">Moderate (occasional exercise)</option>
+                    <option value="sedentary">Sedentary (not active)</option>
+                </select>
+                <label for="nutrition">Preferred Nutrition:</label>
+                <input type="text" id="nutrition">
+                <label for="health-condition">Health Condition:</label>
+                <textarea id="health-condition"></textarea>
+                <button type="submit">Update</button>
+            </form>
+            <h3>Manage Friends</h3>
+            <form id="add-friend-form">
+                <label for="friend-nickname">Friend's Nickname:</label>
+                <input type="text" id="friend-nickname" required>
+                <button type="submit">Add Friend</button>
+            </form>
+            <div id="friends-list">
+                <h4>Your Friends</h4>
+                <ul id="friends-ul">
+                    <!-- Friends will be listed here -->
+                </ul>
+            </div>
+            <h3>Friend's Progress</h3>
+            <div id="progress-info">
+                <!-- Friend's progress will be displayed here -->
+            </div>
+            <h3>Fitness Progress</h3>
+            <div id="calendar"></div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

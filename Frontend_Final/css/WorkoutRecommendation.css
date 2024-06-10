@@ -1,0 +1,23 @@
+/* src/components/WorkoutRecommendation/WorkoutRecommendation.css */
+
+.workout-recommendation {
+    padding: 20px;
+  }
+  
+  .workout-recommendation h2 {
+    color: #900000;
+  }
+  
+  .workout-recommendation ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .workout-recommendation li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+  }
+  

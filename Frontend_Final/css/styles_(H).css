@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #c5cac6;
+}
+
+/*Toolbar*/
+.toolbar {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    border-bottom: 1px #333;
+}
+.toolbar h1 {
+    margin-left: 260px; /* Align with sidebar width when open */
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+/*Sidebar*/
+.expand_sidebar {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer; /*for interactivity*/
+    font-size: 18px;
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
+}
+.sidebar {
+    height: calc(100% - 90px);
+    width: 70px;
+    position: fixed;
+    
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: width 0.3s;
+    padding-top: 20px;
+}
+.sidebar a { 
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: flex;
+    transition: 0.3s;
+    align-items: center;
+}
+.sidebar a .sidebar-text { /*text*/
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: opacity 0.3s;
+}
+.sidebar a:hover { /*hover color*/
+    background-color: #575757;
+}
+
+/*Body*/
+.body_contents {
+    width: calc(100%-70px);
+    bottom: 0;
+    top: 90px;
+    margin-left: 70px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+.body2 {
+    width: calc(100%-250px);
+    bottom: 0;
+    top: 90px;
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 70px;
+    }
+    .sidebar a {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+    .content {
+        margin-left: 80px;
+    }
+}
+#program-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+#current_program_details {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    margin-top: 20px;
+}
+#current_diet_details {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+/*Divider*/
+hr {
+    border: 1px solid grey;
+}
+
+/*Buttons*/
+.redirect-image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+.redirect-image {
+    width: 100px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+}
+
+/* Change Program Type Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border: 5px solid black;
+    margin-top: 20px;
+}
+.grid-item-type {
+    border: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-item-type img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.grid-item-type.selected {
+    border-color: #c2fbc4;
+}
+
+/* Change Program Difficulty Grid */
+.grid-container-1x3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0;
+    border: 5px solid black;
+    margin-top: 20px;
+}
+.grid-item-diff {
+    border: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-item-diff img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.grid-item-diff.selected {
+    border-color: #c2fbc4;
+}
+.selected-difficulty {
+    background-color: #c2fbc4;
+}
+.grid-container-1x3 td:hover {
+    background-color: #fd8484; 
+}
+
+
+/* Change Diet Plan Grid */
+.grid-container-diet {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr ;
+    gap: 0;
+    border: 5px solid black;
+    fill: #bee9ab;
+    margin-top: 20px;
+}
+.grid-item-diet {
+    border: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-item-diet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.grid-item-diet.selected {
+    border-color: #c2fbc4;
+}
+
+/*new trial grid*/
+.diet_grid_container {
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: repeat(4, auto);
+    gap: 0px;
+    margin-top: 10px;
+    
+    border: 3px solid black;
+}
+.diet_grid_item_img {
+    width: 250px;
+    height: 250px;
+    background-color: #575757;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
+}
+.diet_grid_item_text {
+    padding: 10px;
+    background-color: #a9b1a9;
+    border: 4px solid black;
+    font-size: 40px;
+    align-content:space-around;
+}
+.grid-item-text p {
+    margin: 0; /* Remove default margins for better alignment */
+}
+
+
+/*Exercise, Diet Schedule Tables*/
+#schedule-table {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    gap: 0;
+    margin-top: 20px;
+    background-color: #a9b1a9;
+}
+#schedule-table th, #schedule-table td {
+    border: 3px solid black;
+    text-align: center;
+    padding: 10px;
+}
+#schedule-table .exercise-day {
+    background-color: #f8d19b; 
+}
+#schedule-table .rest-day {
+    background-color: #b3dee8; 
+}
+#schedule-table .meal-day {
+    background-color: #e6cb8d; 
+}
+.selected-day {
+    background-color: #fd8484;
+}
+#schedule-table td:hover {
+    background-color: #fd8484; 
+}
+#schedule-table img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/*displayed-image*/
+#displayed-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+}
+
+.home_body_contents {
+    margin-left: 70px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+    background-image: url('/images/background.jpg'); /* Change this path to your actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Make sure the background covers the whole viewport height */
+}
